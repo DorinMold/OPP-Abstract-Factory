@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>OPP_Abstract_Factory</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="AbstractFactoryLib">
+      <HintPath>..\AbstractFactoryLib\bin\Debug\netstandard2.0\AbstractFactoryLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
