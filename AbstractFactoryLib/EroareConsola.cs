@@ -6,18 +6,18 @@ namespace AbstractFactoryLib
 {
     public class EroareConsola
     {
-        public void Afisare(NivelEroare NivEr) {
+        public void Afisare(NivelEroare NivEr, String Mesaj) {
             int i = (int)NivEr ;
             switch ( i )
             {
                 case 0:
-                    Console.WriteLine(EroareContext.MesajAvertizare);
+                    Console.WriteLine(String.Concat(EroareContext.MesajAvertizare, ": ", Mesaj));
                     break;
                 case 1:
-                    Console.WriteLine(EroareContext.MesajSever);
+                    Console.WriteLine(String.Concat(EroareContext.MesajSever, ": ", Mesaj));
                     break;
                 case 2:
-                    Console.WriteLine(EroareContext.MesajCritic);
+                    Console.WriteLine(String.Concat(EroareContext.MesajCritic, ": ", Mesaj));
                     break;
             }
         }

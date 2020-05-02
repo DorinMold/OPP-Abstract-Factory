@@ -7,19 +7,19 @@ namespace AbstractFactoryLib
 {
     public class EroareDebug
     {
-        public void Afisare( NivelEroare NivEr)
+        public void Afisare( NivelEroare NivEr, string Mesaj )
         {
             int i = (int)NivEr;
             switch (i)
             {
                 case 0:
-                    Debug.WriteLine(EroareContext.MesajAvertizare);
+                    Debug.WriteLine( String.Concat(EroareContext.MesajAvertizare, ": ", Mesaj) );
                     break;
                 case 1:
-                    Debug.WriteLine(EroareContext.MesajSever);
+                    Debug.WriteLine( String.Concat(EroareContext.MesajSever, ": ", Mesaj) );
                     break;
                 case 2:
-                    Debug.WriteLine(EroareContext.MesajCritic);
+                    Debug.WriteLine( String.Concat(EroareContext.MesajCritic, ": ", Mesaj) );
                     break;
             }
         }

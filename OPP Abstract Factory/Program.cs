@@ -23,8 +23,8 @@ namespace OPP_Abstract_Factory
             } catch(Exception e)
             {
                 Console.WriteLine($"---------Eroare Impartire {Var1} la {Var2}--------------------");
-                logger.ErConsola().Afisare(NivelEroare.Avertizare);
-                logger.ErDebug().Afisare(NivelEroare.Avertizare);
+                logger.ErConsola().Afisare(NivelEroare.Avertizare, e.Message);
+                logger.ErDebug().Afisare(NivelEroare.Avertizare, e.Message);
             }
 
             //cazul altei erori de impartire la zero
@@ -35,22 +35,21 @@ namespace OPP_Abstract_Factory
             catch (Exception e)
             {
                 Console.WriteLine($"---------Eroare Impartire {Var3} la {Var2}--------------------");
-                logger.ErConsola().Afisare(NivelEroare.Sever);
-                logger.ErDebug().Afisare(NivelEroare.Sever);
+                logger.ErConsola().Afisare(NivelEroare.Sever, e.Message);
+                logger.ErDebug().Afisare(NivelEroare.Sever, e.Message);
             }
 
             //cazul ultimei erori de impartire la zero
             try
             {
-                Rezultat = Var3 / Var2;
+                Rezultat = int.Parse("eroare");
             }
             catch (Exception e)
             {
                 Console.WriteLine($"---------Eroare Impartire {Var3} la {Var2}--------------------");
-                logger.ErConsola().Afisare(NivelEroare.Critic);
-                logger.ErDebug().Afisare(NivelEroare.Critic);
+                logger.ErConsola().Afisare(NivelEroare.Critic, e.Message);
+                logger.ErDebug().Afisare(NivelEroare.Critic, e.Message);
             }
-
         }
     }
 }
